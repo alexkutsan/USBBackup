@@ -1,0 +1,4 @@
+#ACTION=="add", KERNEL=="sd?" SUBSYSTEM=="block",  RUN+="/usr/bin/bash /home/alex/scripts/backup.sh", OPTIONS+="last_rule" 
+#KERNEL=="sd?",ACTION=="mount",RUN+="/home/alex/scripts/backup.sh"
+ENV{ID_FS_LABEL}="BackupFlash",ACTION=="change",RUN+="/home/alex/scripts/backup.sh"
+
