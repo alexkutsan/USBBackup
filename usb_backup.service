@@ -1,0 +1,9 @@
+[Unit]
+Description=Triggers backup script when usb backup drive is mounted
+RequiresMountsFor=/user/media/alex/BackupFlash
+
+[Service]
+ExecStart=/usr/bin/env bash /home/alex/scripts/backup.sh
+
+[Install]
+WantedBy=user-media-alex-BackupFlash.mount
